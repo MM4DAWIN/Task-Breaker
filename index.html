@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Input Form</title>
+    <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+<body>
+    <form action="{{ url_for('submitted') }}" method="post">
+        <h1>Add new task</h1>
+        <label for="task"><strong>Task to <span>Conquer</span> </strong></label>
+        <input type="text" id="task" name="task" placeholder="Type here" required>
+        <br>
+        <label for="time"><strong>Time to <span>Conquer</span> </strong></label>
+        <input type="text" id="time" name="time" placeholder="Type here" required>
+        <br>
+        <div id="c-but">
+        <input type="submit" value="Generate">
+        </div>
+    </form>
+</body>
+</html>
+
+
+
